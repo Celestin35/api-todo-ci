@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 // Middleware pour parser le JSON
+// Juste voir comment pusher dans le develop
 app.use(express.json());
 
 // Base de données en mémoire (simple tableau)
