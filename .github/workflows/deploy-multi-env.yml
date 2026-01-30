@@ -87,10 +87,10 @@ jobs:
     - name: 🏷️ Create Version Tag
       id: tag
       run: |
-        tag_count=$(git tag | grep -c "^v" || echo "0")
-        new_version="v1.0.$((tag_count + 1))"
-        echo "version=$new_version" >> $GITHUB_OUTPUT
-        echo "📌 New version: $new_version"
+        count=$(git tag -l "v1.0.*" | wc -l)
+        version="v1.0.$count"
+        echo "version=$version" >> $GITHUB_OUTPUT
+        echo "📌 New version: $version"
     
     - name: 🚀 Trigger Production Deploy
       run: |
