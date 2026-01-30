@@ -18,6 +18,7 @@ let nextId = 3;
 app.get('/', (req, res) => {
     res.json({
         message: 'API TODO - Déploiement Automatique Fonctionne !',
+        environment: process.env.NODE_ENV || 'development',
         endpoints: {
             'GET /todos': 'Liste des todos',
             'GET /todos/:id': 'Un todo spécifique',
@@ -29,6 +30,7 @@ app.get('/', (req, res) => {
         version: '1.0.0'
     });
 });
+
 
 // GET /todos - Récupérer tous les todos
 app.get('/todos', (req, res) => {
