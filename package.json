@@ -8,17 +8,23 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "keywords": ["api", "todo", "ci", "cd"],
+  "keywords": [
+    "api",
+    "todo",
+    "ci",
+    "cd"
+  ],
   "author": "Votre Prénom",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mime": "^3.0.0"
   },
   "devDependencies": {
     "jest": "^29.7.0",
     "supertest": "^6.3.3"
   },
   "engines": {
-  "node": "18.x"
-}
+    "node": "18.x"
+  }
 }
